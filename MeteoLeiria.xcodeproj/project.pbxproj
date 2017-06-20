@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E785590A1EEF038700767182 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78559091EEF038700767182 /* URL+Extensions.swift */; };
 		E78A25331EED56A800898B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A25321EED56A800898B26 /* AppDelegate.swift */; };
 		E78A25381EED56A800898B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78A25361EED56A800898B26 /* Main.storyboard */; };
 		E78A253A1EED56A800898B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78A25391EED56A800898B26 /* Assets.xcassets */; };
@@ -15,9 +16,16 @@
 		E78A25531EED56A800898B26 /* MeteoLeiriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A25521EED56A800898B26 /* MeteoLeiriaUITests.swift */; };
 		E78A25651EED586E00898B26 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A25641EED586E00898B26 /* APIConfig.swift */; };
 		E79B0A0D1EED5D03000A5F20 /* DaysCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B0A0C1EED5D03000A5F20 /* DaysCollectionViewController.swift */; };
-		E79B0A101EED6019000A5F20 /* ForecastEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B0A0F1EED6019000A5F20 /* ForecastEntry.swift */; };
+		E79B0A101EED6019000A5F20 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B0A0F1EED6019000A5F20 /* Weather.swift */; };
 		E79B0A131EED6051000A5F20 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B0A121EED6051000A5F20 /* Entry.swift */; };
 		E79B0A161EED96D4000A5F20 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B0A151EED96D4000A5F20 /* DayCollectionViewCell.swift */; };
+		E7D18C631EF03A93002E616A /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D18C621EF03A93002E616A /* WeatherManager.swift */; };
+		E7F738351EF9158000BBC28F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F738341EF9158000BBC28F /* GradientView.swift */; };
+		E7F738371EF917DD00BBC28F /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F738361EF917DD00BBC28F /* CurrentViewController.swift */; };
+		E7F738381EF91C2000BBC28F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A25611EED57B800898B26 /* BaseViewController.swift */; };
+		E7FFB7131EEE781100EAE50C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7121EEE781100EAE50C /* ServiceManager.swift */; };
+		E7FFB7151EEE78AB00EAE50C /* MeteoLeiriaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7141EEE78AB00EAE50C /* MeteoLeiriaService.swift */; };
+		E7FFB7171EEE7A5600EAE50C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7161EEE7A5600EAE50C /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E78559091EEF038700767182 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		E78A252F1EED56A800898B26 /* MeteoLeiria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoLeiria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78A25321EED56A800898B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E78A25371EED56A800898B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,9 +62,15 @@
 		E78A25611EED57B800898B26 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E78A25641EED586E00898B26 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		E79B0A0C1EED5D03000A5F20 /* DaysCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysCollectionViewController.swift; sourceTree = "<group>"; };
-		E79B0A0F1EED6019000A5F20 /* ForecastEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastEntry.swift; sourceTree = "<group>"; };
+		E79B0A0F1EED6019000A5F20 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E79B0A121EED6051000A5F20 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E79B0A151EED96D4000A5F20 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7D18C621EF03A93002E616A /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		E7F738341EF9158000BBC28F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E7F738361EF917DD00BBC28F /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
+		E7FFB7121EEE781100EAE50C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		E7FFB7141EEE78AB00EAE50C /* MeteoLeiriaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLeiriaService.swift; sourceTree = "<group>"; };
+		E7FFB7161EEE7A5600EAE50C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E78559081EEF036300767182 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E78559091EEF038700767182 /* URL+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E78A25261EED56A800898B26 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				E78A25321EED56A800898B26 /* AppDelegate.swift */,
+				E78559081EEF036300767182 /* Extensions */,
+				E7FFB7111EEE77FB00EAE50C /* Manager */,
 				E79B0A0E1EED5FFF000A5F20 /* Models */,
 				E79B0A111EED6036000A5F20 /* Protocols */,
 				E78A25621EED57EF00898B26 /* Resources */,
@@ -140,6 +165,7 @@
 			children = (
 				E78A25361EED56A800898B26 /* Main.storyboard */,
 				E78A25611EED57B800898B26 /* BaseViewController.swift */,
+				E7F738361EF917DD00BBC28F /* CurrentViewController.swift */,
 				E79B0A0C1EED5D03000A5F20 /* DaysCollectionViewController.swift */,
 			);
 			path = ViewControllers;
@@ -159,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E78A25641EED586E00898B26 /* APIConfig.swift */,
+				E7FFB7141EEE78AB00EAE50C /* MeteoLeiriaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,7 +193,7 @@
 		E79B0A0E1EED5FFF000A5F20 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E79B0A0F1EED6019000A5F20 /* ForecastEntry.swift */,
+				E79B0A0F1EED6019000A5F20 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				E79B0A121EED6051000A5F20 /* Entry.swift */,
+				E7FFB7161EEE7A5600EAE50C /* Request.swift */,
+				E7D18C621EF03A93002E616A /* WeatherManager.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -183,8 +212,17 @@
 			isa = PBXGroup;
 			children = (
 				E79B0A151EED96D4000A5F20 /* DayCollectionViewCell.swift */,
+				E7F738341EF9158000BBC28F /* GradientView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E7FFB7111EEE77FB00EAE50C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFB7121EEE781100EAE50C /* ServiceManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,12 +356,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F738381EF91C2000BBC28F /* BaseViewController.swift in Sources */,
+				E785590A1EEF038700767182 /* URL+Extensions.swift in Sources */,
 				E79B0A131EED6051000A5F20 /* Entry.swift in Sources */,
+				E7F738351EF9158000BBC28F /* GradientView.swift in Sources */,
 				E79B0A161EED96D4000A5F20 /* DayCollectionViewCell.swift in Sources */,
+				E7FFB7131EEE781100EAE50C /* ServiceManager.swift in Sources */,
 				E78A25651EED586E00898B26 /* APIConfig.swift in Sources */,
+				E7D18C631EF03A93002E616A /* WeatherManager.swift in Sources */,
+				E7F738371EF917DD00BBC28F /* CurrentViewController.swift in Sources */,
 				E79B0A0D1EED5D03000A5F20 /* DaysCollectionViewController.swift in Sources */,
 				E78A25331EED56A800898B26 /* AppDelegate.swift in Sources */,
-				E79B0A101EED6019000A5F20 /* ForecastEntry.swift in Sources */,
+				E7FFB7171EEE7A5600EAE50C /* Request.swift in Sources */,
+				E7FFB7151EEE78AB00EAE50C /* MeteoLeiriaService.swift in Sources */,
+				E79B0A101EED6019000A5F20 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +444,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -453,6 +501,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

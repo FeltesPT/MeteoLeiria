@@ -15,19 +15,11 @@ struct APIConfig {
 }
 
 extension APIConfig {
-    static func meteoLeiriaForecastConfig() -> APIConfig {
-        return APIConfig(
-            apiScheme: "http",
-            apiHost: "meteoleiria.org",
-            apiPath: "data/prevwuleiria.xml"
-        )
-    }
-    
-    static func meteoLeiriaCurrentConfig() -> APIConfig {
+    static func meteoLeiriaConfig() -> APIConfig {
         return APIConfig (
             apiScheme: "http",
             apiHost: "meteoleiria.org",
-            apiPath: "data/wdfulldata.xml"
+            apiPath: "prevJson.aspx"
         )
     }
 }

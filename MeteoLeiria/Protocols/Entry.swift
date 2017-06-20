@@ -8,28 +8,17 @@
 
 import Foundation
 
-protocol Current {
-    var time: String { get set }
-    var date: String { get set }
-    var forecasticonword: String { get set }
-    var weathercond: String { get set }
-    var temp: String { get set }
-    var hum: String { get set }
-    var maxtemp: String { get set }
-    var maxtempt: String { get set }
-    
-    // wind
-    var gstspd: String { get set }
-    var dirlabel: String { get set }
-    init()
+protocol CurrentType {
+    var tempCelsius: Double { get set }
+    var humidityPercentage: Int { get set }
+    var windSpeedAvgKmH: Double { get set }
 }
 
-protocol Forecast {
-    var icon: String { get set } // http://icons.wxug.com/i/c/k/partlycloudy.gif
-    var date: String { get set }
-    var weekday: String { get set }
-    var maxtemp: String { get set }
-    var mintemp: String { get set }
-    var avewind: String { get set }
-    var avehumidity: String { get set }
+protocol ForecastType {
+    var day: String { get set }
+    var icon: String { get set }
+    var tempHighCelsius: Int { get set }
+    var tempLowCelsius: Int { get set }
+    var rainProbabilityPercentage: Int { get set }
+    var conditions: String { get set }
 }

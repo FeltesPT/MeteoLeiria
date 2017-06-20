@@ -11,35 +11,17 @@ import UIKit
 class DayCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var day: UILabel!
-    @IBOutlet weak var hour: UILabel!
-    @IBOutlet weak var date: UILabel!
     
-    func customise(forecast: Forecast) {
+    func customise(forecast: ForecastType) {
+        day.text = forecast.day == "today" ? "Hoje" : forecast.day // Solve this with the API - This is definitely not the best approach
         
-    }
-    
-    func customise(current: Current) {
-        day.text = dayFromInt(dayInt: NSDateComponents().weekday)
-        date.text = current.date
+        day.textColor = UIColor.white
         
+        layer.cornerRadius = 4
+        layer.borderColor = UIColor(white: 1, alpha: 0.3).cgColor
+        layer.borderWidth = 1
+        
+        backgroundColor = UIColor(white: 1, alpha: 0.2)
     }
     
-    func dayFromInt(dayInt: Int) -> String {
-        switch dayInt {
-        case 0:
-            return "Domingo"
-        case 1:
-            return "Segunda"
-        case 2:
-            return "Terça"
-        case 3:
-            return "Quarta"
-        case 4:
-            return "Quinta"
-        case 5:
-            return "Sexta"
-        default:
-            return "Sábado"
-        }
-    }
 }
