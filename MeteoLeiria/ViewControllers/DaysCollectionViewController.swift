@@ -8,14 +8,22 @@
 
 import UIKit
 
-private let reuseIdentifier = "DayCell"
+protocol DayCollectionViewCellDelegate {
+    func indexSelected(indexPath: IndexPath)
+}
 
 final class DaysCollectionViewController: UICollectionViewController {
     
+    private let reuseIdentifier = "DayCell"
+    
     public var weather: Weather?
+    public var delegate: DayCollectionViewCellDelegate?
     
     public func refresh() {
         collectionView?.reloadData()
+        
+        let firstIndexPath = IndexPath(row: 0, section: 0)
+        collectionView?.selectItem(at: firstIndexPath, animated: true, scrollPosition: .centeredHorizontally)
     }
     
     // MARK: UICollectionViewDataSource
@@ -26,46 +34,30 @@ final class DaysCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return weather?.forecast.count ?? 0
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? DayCollectionViewCell else {
             fatalError("Wrong cell type")
         }
         
-        cell.customise(forecast: (weather?.forecast[indexPath.row])!)
+        guard let forecast = weather?.forecast[indexPath.row] else {
+            return cell
+        }
+        
+        if indexPath.row == 0 {
+            cell.customiseToday(forecast: forecast)
+            cell.isSelected = true
+        } else {
+            cell.customise(forecast: forecast)
+        }
         
         return cell
     }
     
     // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        delegate?.indexSelected(indexPath: indexPath)
     }
-    */
-
 }

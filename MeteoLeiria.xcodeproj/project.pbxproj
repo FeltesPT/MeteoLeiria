@@ -23,6 +23,8 @@
 		E7F738351EF9158000BBC28F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F738341EF9158000BBC28F /* GradientView.swift */; };
 		E7F738371EF917DD00BBC28F /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F738361EF917DD00BBC28F /* CurrentViewController.swift */; };
 		E7F738381EF91C2000BBC28F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A25611EED57B800898B26 /* BaseViewController.swift */; };
+		E7F7383A1EF9253700BBC28F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F738391EF9253700BBC28F /* UIColor+Extensions.swift */; };
+		E7F7383C1EF96E5400BBC28F /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7383B1EF96E5400BBC28F /* UILabel+Extensions.swift */; };
 		E7FFB7131EEE781100EAE50C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7121EEE781100EAE50C /* ServiceManager.swift */; };
 		E7FFB7151EEE78AB00EAE50C /* MeteoLeiriaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7141EEE78AB00EAE50C /* MeteoLeiriaService.swift */; };
 		E7FFB7171EEE7A5600EAE50C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFB7161EEE7A5600EAE50C /* Request.swift */; };
@@ -68,6 +70,8 @@
 		E7D18C621EF03A93002E616A /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		E7F738341EF9158000BBC28F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E7F738361EF917DD00BBC28F /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
+		E7F738391EF9253700BBC28F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E7F7383B1EF96E5400BBC28F /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		E7FFB7121EEE781100EAE50C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E7FFB7141EEE78AB00EAE50C /* MeteoLeiriaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLeiriaService.swift; sourceTree = "<group>"; };
 		E7FFB7161EEE7A5600EAE50C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				E78559091EEF038700767182 /* URL+Extensions.swift */,
+				E7F738391EF9253700BBC28F /* UIColor+Extensions.swift */,
+				E7F7383B1EF96E5400BBC28F /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F738381EF91C2000BBC28F /* BaseViewController.swift in Sources */,
+				E7F7383A1EF9253700BBC28F /* UIColor+Extensions.swift in Sources */,
 				E785590A1EEF038700767182 /* URL+Extensions.swift in Sources */,
 				E79B0A131EED6051000A5F20 /* Entry.swift in Sources */,
 				E7F738351EF9158000BBC28F /* GradientView.swift in Sources */,
@@ -367,6 +374,7 @@
 				E7F738371EF917DD00BBC28F /* CurrentViewController.swift in Sources */,
 				E79B0A0D1EED5D03000A5F20 /* DaysCollectionViewController.swift in Sources */,
 				E78A25331EED56A800898B26 /* AppDelegate.swift in Sources */,
+				E7F7383C1EF96E5400BBC28F /* UILabel+Extensions.swift in Sources */,
 				E7FFB7171EEE7A5600EAE50C /* Request.swift in Sources */,
 				E7FFB7151EEE78AB00EAE50C /* MeteoLeiriaService.swift in Sources */,
 				E79B0A101EED6019000A5F20 /* Weather.swift in Sources */,

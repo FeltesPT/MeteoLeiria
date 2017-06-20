@@ -12,16 +12,38 @@ class DayCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var day: UILabel!
     
-    func customise(forecast: ForecastType) {
-        day.text = forecast.day == "today" ? "Hoje" : forecast.day // Solve this with the API - This is definitely not the best approach
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? UIColor.highlightedBackgroundWhite : UIColor.backgroundWhite
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            backgroundColor = isSelected ? UIColor.selectedBackgroundWhite : UIColor.backgroundWhite
+        }
+    }
+    
+    func customiseToday(forecast: ForecastType) {
+        day.text = "Hoje"
         
+        commonInit()
+    }
+    
+    func customise(forecast: ForecastType) {
+        day.text = forecast.day
+        
+        commonInit()
+    }
+    
+    private func commonInit() {
         day.textColor = UIColor.white
         
-        layer.cornerRadius = 4
-        layer.borderColor = UIColor(white: 1, alpha: 0.3).cgColor
-        layer.borderWidth = 1
+        layer.cornerRadius = 8
+        layer.borderColor = UIColor.borderWhite.cgColor
+        layer.borderWidth = 3
         
-        backgroundColor = UIColor(white: 1, alpha: 0.2)
+        backgroundColor = UIColor.backgroundWhite
     }
     
 }

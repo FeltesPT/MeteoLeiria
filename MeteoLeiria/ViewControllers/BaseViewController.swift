@@ -10,6 +10,8 @@ import UIKit
 
 final class BaseViewController: UIViewController {
     
+    @IBOutlet weak var gradientView: GradientView!
+    
     let serviceManager = ServiceManager()
     var weather: Weather?
     
@@ -18,6 +20,10 @@ final class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         serviceManager.getWeatherData(completionHandler: { (result) in
             switch result {
@@ -40,15 +46,31 @@ final class BaseViewController: UIViewController {
         
         currentViewController?.refresh()
         daysCollectionViewController?.refresh()
+        
+        if let temp = weather?.current.tempCelsius, temp > 20 {
+            gradientView.topGradientColor = UIColor.gradientLightOrange.cgColor
+            gradientView.bottomGradientColor = UIColor.gradientDarkOrange.cgColor
+            gradientView.commonInit()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let daysVC = segue.destination as? DaysCollectionViewController {
             daysCollectionViewController = daysVC
+            daysCollectionViewController?.delegate = self
         } else if let currentVC = segue.destination as? CurrentViewController {
             currentViewController = currentVC
         }
     }
+    
+}
+
+extension BaseViewController: DayCollectionViewCellDelegate {
+    func indexSelected(indexPath: IndexPath) {
+        currentViewController?.selectedIndex = indexPath.row
+        currentViewController?.refresh()
+    }
+    
     
 }
 

@@ -16,8 +16,8 @@ open class GradientView: UIView {
     
     let gradientLayer = CAGradientLayer()
     
-    public var topGradientColor: CGColor = UIColor.white.cgColor
-    public var bottomGradientColor: CGColor = UIColor.blue.cgColor
+    public var topGradientColor: CGColor = UIColor.grandientLightBlue.cgColor
+    public var bottomGradientColor: CGColor = UIColor.grandientDarkBlue.cgColor
     
     public var startPoint: CGPoint = CGPoint(x:0.5, y:0)
     public var endPoint: CGPoint = CGPoint(x:0.5, y:1)
